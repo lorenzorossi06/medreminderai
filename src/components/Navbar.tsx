@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Pill } from 'lucide-react';
 
@@ -17,9 +18,11 @@ const Navbar: React.FC = () => {
             <a href="#stats" className="text-gray-600 hover:text-medreminder-primary px-3 py-2 transition-colors">Statistiche</a>
             <a href="#mission" className="text-gray-600 hover:text-medreminder-primary px-3 py-2 transition-colors">Missione</a>
             <a href="#team" className="text-gray-600 hover:text-medreminder-primary px-3 py-2 transition-colors">Team</a>
-            <Button className="bg-medreminder-primary hover:bg-medreminder-dark text-white">
-              Scarica Ora
-            </Button>
+            <Link to="/preview">
+              <Button className="bg-medreminder-primary hover:bg-medreminder-dark text-white">
+                Scarica Ora
+              </Button>
+            </Link>
           </div>
           <div className="md:hidden">
             <Button variant="ghost" size="icon" className="text-gray-600">

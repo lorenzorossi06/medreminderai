@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Pill, Bell, Search, MessageSquare } from 'lucide-react';
 
@@ -19,9 +20,11 @@ const Hero: React.FC = () => {
               Un'app innovativa progettata per rendere l'assunzione dei farmaci più facile, intuitiva e sicura per tutti.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
-              <Button size="lg" className="bg-medreminder-primary hover:bg-medreminder-dark text-white">
-                Scarica Ora
-              </Button>
+              <Link to="/preview">
+                <Button size="lg" className="bg-medreminder-primary hover:bg-medreminder-dark text-white">
+                  Scarica Ora
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="border-medreminder-primary text-medreminder-primary hover:bg-medreminder-secondary">
                 Scopri di più
               </Button>

@@ -13,17 +13,17 @@ const Hero: React.FC = () => {
               <div className="pill-icon inline-block"></div>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 leading-tight animate-fade-in">
-              Simplifying<br />Medication Management
+              Semplificare<br />la gestione dei farmaci
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
-              An innovative app designed to make taking medications easier, more intuitive, and safer for everyone.
+              Un'app innovativa progettata per rendere l'assunzione dei farmaci più facile, intuitiva e sicura per tutti.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
               <Button size="lg" className="bg-medreminder-primary hover:bg-medreminder-dark text-white">
-                Download Now
+                Scarica Ora
               </Button>
               <Button size="lg" variant="outline" className="border-medreminder-primary text-medreminder-primary hover:bg-medreminder-secondary">
-                Learn More
+                Scopri di più
               </Button>
             </div>
           </div>
@@ -32,19 +32,19 @@ const Hero: React.FC = () => {
               <div className="absolute -top-4 -right-4 bg-medreminder-primary text-white rounded-full p-3">
                 <Pill size={24} />
               </div>
-              <h3 className="font-semibold text-lg mb-4">Medication Reminder</h3>
+              <h3 className="font-semibold text-lg mb-4">Promemoria Farmaci</h3>
               <div className="space-y-3">
                 <div className="flex items-center p-3 bg-medreminder-secondary rounded-lg">
                   <Bell size={20} className="text-medreminder-primary mr-3" />
-                  <span>Take Amoxicillin - 500mg</span>
+                  <span>Prendi Amoxicillina - 500mg</span>
                 </div>
                 <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                   <Search size={20} className="text-medreminder-primary mr-3" />
-                  <span>Find medication information</span>
+                  <span>Trova informazioni sui farmaci</span>
                 </div>
                 <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                   <MessageSquare size={20} className="text-medreminder-primary mr-3" />
-                  <span>Ask AI about side effects</span>
+                  <span>Chiedi all'AI sugli effetti collaterali</span>
                 </div>
               </div>
             </div>

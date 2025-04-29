@@ -33,7 +33,7 @@ const Index = () => {
             onClick={scrollToFeatures}
           >
             <ArrowDown className="h-5 w-5 text-medreminder-primary" />
-            <span className="sr-only">Scroll Down</span>
+            <span className="sr-only">Scorri Giù</span>
           </Button>
         </div>
         

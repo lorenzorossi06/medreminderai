@@ -3,10 +3,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Pill } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <motion.nav 
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
@@ -34,7 +40,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

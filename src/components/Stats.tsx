@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Pill, Users, CheckCircle } from 'lucide-react';
+import { Pill, Gift, CheckCircle } from 'lucide-react';
 
 const Stats: React.FC = () => {
   return (
@@ -24,10 +24,10 @@ const Stats: React.FC = () => {
           
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
             <div className="flex justify-center mb-4">
-              <Users className="h-12 w-12 text-medreminder-primary" />
+              <Gift className="h-12 w-12 text-medreminder-primary" />
             </div>
-            <h3 className="text-4xl font-bold text-medreminder-primary mb-2">60%</h3>
-            <p className="text-gray-600">Degli utenti assumono medicinali con frequenza</p>
+            <h3 className="text-4xl font-bold text-medreminder-primary mb-2">App Gratuita</h3>
+            <p className="text-gray-600">Accessibile a tutti senza costi</p>
           </div>
           
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">

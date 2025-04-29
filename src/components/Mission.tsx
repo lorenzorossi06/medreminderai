@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Medkit, Heart } from 'lucide-react';
+import { Pill, Heart } from 'lucide-react';
 
 const Mission: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const Mission: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-medreminder-secondary p-8 rounded-xl">
             <div className="flex items-center mb-6">
-              <Medkit className="h-10 w-10 text-medreminder-primary mr-4" />
+              <Pill className="h-10 w-10 text-medreminder-primary mr-4" />
               <h3 className="text-2xl font-bold text-gray-800">Missione</h3>
             </div>
             <p className="text-gray-700 text-lg">

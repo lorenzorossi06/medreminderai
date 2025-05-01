@@ -1,33 +1,11 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, MessageSquare, Search, Instagram } from 'lucide-react';
+import { ArrowLeft, Calendar, MessageSquare, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useToast } from "@/hooks/use-toast";
 import Footer from '@/components/Footer';
 
 const Preview = () => {
-  const [instagramProfile, setInstagramProfile] = useState('');
-  const { toast } = useToast();
-
-  const handleFollow = () => {
-    if (!instagramProfile) {
-      toast({
-        title: "Campo vuoto",
-        description: "Per favore inserisci il tuo profilo Instagram",
-        variant: "destructive",
-      });
-      return;
-    }
-    
-    toast({
-      title: "Grazie!",
-      description: "Ti aggiorneremo sulle novità di MedReminderAI",
-    });
-    
-    setInstagramProfile('');
-  };
-
   return (
     <div className="min-h-screen bg-medreminder-light flex flex-col">
       {/* Header with back button */}
@@ -108,32 +86,6 @@ const Preview = () => {
                 className="w-full h-auto"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Instagram profile form */}
-        <div className="text-center bg-medreminder-secondary p-8 rounded-xl shadow-md animate-fade-in" style={{animationDelay: "0.6s"}}>
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Seguici su Instagram</h3>
-          <p className="text-gray-600 mb-6">
-            Inserisci il tuo profilo Instagram per essere tra i primi a conoscere la data di lancio dell'app
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <div className="relative sm:w-64">
-              <Instagram className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              <input
-                type="text"
-                value={instagramProfile}
-                onChange={(e) => setInstagramProfile(e.target.value)}
-                placeholder="@il_tuo_profilo"
-                className="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-medreminder-primary"
-              />
-            </div>
-            <Button 
-              className="bg-medreminder-primary hover:bg-medreminder-dark text-white"
-              onClick={handleFollow}
-            >
-              Segui
-            </Button>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Pill, Mail, ExternalLink } from 'lucide-react';
+import { Pill, Mail, ExternalLink, Instagram, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -41,11 +41,19 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <Mail className="h-4 w-4 text-medreminder-primary mr-2" />
-                  <a href="mailto:info@medreminderai.com" className="text-gray-600 hover:text-medreminder-primary transition-colors">info@medreminderai.com</a>
+                  <a href="mailto:medreminderai@gmail.com" className="text-gray-600 hover:text-medreminder-primary transition-colors">medreminderai@gmail.com</a>
                 </li>
                 <li className="flex items-center">
                   <ExternalLink className="h-4 w-4 text-medreminder-primary mr-2" />
                   <a href="https://itisdalmine.edu.it/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-medreminder-primary transition-colors">ITIS G. Marconi</a>
+                </li>
+                <li className="flex items-center">
+                  <Instagram className="h-4 w-4 text-medreminder-primary mr-2" />
+                  <a href="#" className="text-gray-600 hover:text-medreminder-primary transition-colors">Instagram</a>
+                </li>
+                <li className="flex items-center">
+                  <Youtube className="h-4 w-4 text-medreminder-primary mr-2" />
+                  <a href="#" className="text-gray-600 hover:text-medreminder-primary transition-colors">YouTube</a>
                 </li>
               </ul>
             </div>

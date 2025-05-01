@@ -1,12 +1,35 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, MessageSquare, Search, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useToast } from "@/hooks/use-toast";
+import Footer from '@/components/Footer';
 
 const Preview = () => {
+  const [instagramProfile, setInstagramProfile] = useState('');
+  const { toast } = useToast();
+
+  const handleFollow = () => {
+    if (!instagramProfile) {
+      toast({
+        title: "Campo vuoto",
+        description: "Per favore inserisci il tuo profilo Instagram",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    toast({
+      title: "Grazie!",
+      description: "Ti aggiorneremo sulle novità di MedReminderAI",
+    });
+    
+    setInstagramProfile('');
+  };
+
   return (
-    <div className="min-h-screen bg-medreminder-light">
+    <div className="min-h-screen bg-medreminder-light flex flex-col">
       {/* Header with back button */}
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +46,7 @@ const Preview = () => {
       </div>
 
       {/* Main content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
         {/* App coming soon message */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-medreminder-primary animate-fade-in">
@@ -92,18 +115,23 @@ const Preview = () => {
         <div className="text-center bg-medreminder-secondary p-8 rounded-xl shadow-md animate-fade-in" style={{animationDelay: "0.6s"}}>
           <h3 className="text-2xl font-bold text-gray-800 mb-4">Seguici su Instagram</h3>
           <p className="text-gray-600 mb-6">
-            Inserisci il tuo profilo Instagram per rimanere aggiornato sulle novità e il lancio dell'app
+            Inserisci il tuo profilo Instagram per essere tra i primi a conoscere la data di lancio dell'app
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div className="relative sm:w-64">
               <Instagram className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               <input
                 type="text"
+                value={instagramProfile}
+                onChange={(e) => setInstagramProfile(e.target.value)}
                 placeholder="@il_tuo_profilo"
                 className="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-medreminder-primary"
               />
             </div>
-            <Button className="bg-medreminder-primary hover:bg-medreminder-dark text-white">
+            <Button 
+              className="bg-medreminder-primary hover:bg-medreminder-dark text-white"
+              onClick={handleFollow}
+            >
               Segui
             </Button>
           </div>
@@ -111,14 +139,7 @@ const Preview = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-50 py-12 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-gray-500">© 2025 MedReminderAI. Tutti i diritti riservati.</p>
-            <p className="text-gray-500 mt-2">ITIS Guglielmo Marconi Dalmine • Progetto JA Italia</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

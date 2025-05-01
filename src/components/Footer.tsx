@@ -49,11 +49,11 @@ const Footer: React.FC = () => {
                 </li>
                 <li className="flex items-center">
                   <Instagram className="h-4 w-4 text-medreminder-primary mr-2" />
-                  <a href="#" className="text-gray-600 hover:text-medreminder-primary transition-colors">Instagram</a>
+                  <a href="https://www.instagram.com/medreminderai/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-medreminder-primary transition-colors">Instagram</a>
                 </li>
                 <li className="flex items-center">
                   <Youtube className="h-4 w-4 text-medreminder-primary mr-2" />
-                  <a href="#" className="text-gray-600 hover:text-medreminder-primary transition-colors">YouTube</a>
+                  <a href="https://www.youtube.com/@MedreminderAi" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-medreminder-primary transition-colors">YouTube</a>
                 </li>
               </ul>
             </div>

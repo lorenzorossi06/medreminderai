@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, MessageSquare, Search } from 'lucide-react';
+import { ArrowLeft, Calendar, MessageSquare, Search, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Preview = () => {
@@ -88,20 +88,23 @@ const Preview = () => {
           </div>
         </div>
 
-        {/* Call to action */}
+        {/* Instagram profile form */}
         <div className="text-center bg-medreminder-secondary p-8 rounded-xl shadow-md animate-fade-in" style={{animationDelay: "0.6s"}}>
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Rimani aggiornato</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">Seguici su Instagram</h3>
           <p className="text-gray-600 mb-6">
-            Lascia la tua email per essere tra i primi a sapere quando MedReminderAI sarà disponibile per il download.
+            Inserisci il tuo profilo Instagram per rimanere aggiornato sulle novità e il lancio dell'app
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <input
-              type="email"
-              placeholder="La tua email"
-              className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-medreminder-primary sm:w-64"
-            />
+            <div className="relative sm:w-64">
+              <Instagram className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <input
+                type="text"
+                placeholder="@il_tuo_profilo"
+                className="pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-medreminder-primary"
+              />
+            </div>
             <Button className="bg-medreminder-primary hover:bg-medreminder-dark text-white">
-              Notificami
+              Segui
             </Button>
           </div>
         </div>

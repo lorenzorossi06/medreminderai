@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li className="flex items-center">
                   <ExternalLink className="h-4 w-4 text-medreminder-primary mr-2" />
-                  <a href="https://www.itis.marconidalmine.it" className="text-gray-600 hover:text-medreminder-primary transition-colors">ITIS G. Marconi</a>
+                  <a href="https://itisdalmine.edu.it/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-medreminder-primary transition-colors">ITIS G. Marconi</a>
                 </li>
               </ul>
             </div>

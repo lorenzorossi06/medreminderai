@@ -23,12 +23,6 @@ const EmailConfirmed: React.FC = () => {
             </p>
             
             <div className="space-y-4">
-              <Link to="/preview">
-                <Button className="w-full bg-medreminder-primary hover:bg-medreminder-dark text-white">
-                  Scarica l'App
-                </Button>
-              </Link>
-              
               <Link to="/">
                 <Button variant="outline" className="w-full">
                   Torna alla Home

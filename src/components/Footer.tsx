@@ -31,8 +31,8 @@ const Footer: React.FC = () => {
               <h4 className="text-sm font-semibold text-gray-800 uppercase tracking-wider mb-4">Informazioni</h4>
               <ul className="space-y-3">
                 <li><a href="#team" className="text-gray-600 hover:text-medreminder-primary transition-colors">Team</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-medreminder-primary transition-colors">Privacy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-medreminder-primary transition-colors">Termini</a></li>
+                <li><a href="/privacy/informativa.pdf" className="text-gray-600 hover:text-medreminder-primary transition-colors">Privacy</a></li>
+                <li><a href="/privacy/informativa.pdf" className="text-gray-600 hover:text-medreminder-primary transition-colors">Termini</a></li>
               </ul>
             </div>
             

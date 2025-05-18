@@ -19,15 +19,12 @@ const Hero: React.FC = () => {
             <p className="text-lg md:text-xl text-gray-600 mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
               Un'app innovativa progettata per rendere l'assunzione dei farmaci più facile, intuitiva e sicura per tutti.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
+            <div className="animate-fade-in" style={{animationDelay: "0.4s"}}>
               <Link to="/preview">
                 <Button size="lg" className="bg-medreminder-primary hover:bg-medreminder-dark text-white">
                   Scarica Ora
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-medreminder-primary text-medreminder-primary hover:bg-medreminder-secondary">
-                Scopri di più
-              </Button>
             </div>
           </div>
           <div className="md:w-1/2 mt-12 md:mt-0 animate-fade-in" style={{animationDelay: "0.6s"}}>

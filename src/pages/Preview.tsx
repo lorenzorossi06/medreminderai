@@ -25,6 +25,22 @@ const Preview = () => {
 
       {/* Main content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+        {/* Download CTA - New prominent section */}
+        <div className="text-center mb-16 py-10">
+          <h2 className="text-5xl md:text-6xl font-bold text-medreminder-primary animate-fade-in tracking-tight">
+            SCARICA LA DEMO ORA
+          </h2>
+          <div className="mt-6 animate-fade-in" style={{animationDelay: "0.2s"}}>
+            <a 
+              href="#" 
+              className="inline-block py-3 px-8 text-xl font-medium text-white bg-medreminder-dark hover:bg-medreminder-primary transition-colors duration-300 rounded-lg shadow-lg hover:shadow-xl"
+            >
+              {/* This is where the link will go */}
+              Link placeholder
+            </a>
+          </div>
+        </div>
+
         {/* App coming soon message */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-medreminder-primary animate-fade-in">
